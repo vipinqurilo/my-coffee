@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .scale-90 {
+    transform: scale(0.9);
+  }
+  .scale-100 {
+    transform: scale(1);
+  }
+}
+*{
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0;
+  font-family: "Kanit", sans-serif;
+}
+.font1{
+  font-family: "Mrs Saint Delafield", cursive;
+}
+#darken {
+  background-color: black;
+  opacity: 30%;
+}
