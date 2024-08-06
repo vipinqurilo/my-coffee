@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
-import bgImg from "../../assets/special-of-the-day/7.jpg"; // Replace with actual image path later
+import bgImg1 from "../../assets/special-of-the-day/7.jpg"; // Replace with actual image path later
+import bgImg2 from "../../assets/special-of-the-day/8.jpg"; // Add another image
 import cup from "../../assets/special-of-the-day/1-1.png";
 
 const SpecialCard = () => {
   const [scrollPos, setScrollPos] = useState(0);
   const [animateScroll, setAnimateScroll] = useState(0);
+  const [bgImg, setBgImg] = useState(bgImg1); // Start with the first image
+  const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +33,16 @@ const SpecialCard = () => {
 
     return () => cancelAnimationFrame(animationFrameId);
   }, [scrollPos]);
+
+  useEffect(() => {
+    const images = [bgImg1, bgImg2]; // Array of background images
+    const interval = setInterval(() => {
+      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setBgImg(images[(imageIndex + 1) % images.length]);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [imageIndex]);
 
   const translateStyle = {
     transform: `translate(${animateScroll * 0}px, ${animateScroll * 0.1}px)`,
@@ -59,12 +72,12 @@ const SpecialCard = () => {
           </button>
         </div>
       </div>
-      <div className="w-1/2 relative h-full">
+      <div className="w-1/2 relative h-full -translate-y-[30%]">
         <div className="absolute " style={translateStyle}>
           <img
             src={cup}
             alt="Coffee Cup"
-            className="rounded-full w-[570px] h-[570px] object-cover shadow-lg "
+            className="rounded-full w-[570px] h-[570px] object-cover shadow-lg top-0  "
           />
           <div className="absolute top-10 left-0 bg-primary text-white p-4 rounded-full font-bold text-center w-32 h-32 flex flex-col justify-center items-center">
             <div className="text-3xl">600</div>

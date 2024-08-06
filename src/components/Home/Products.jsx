@@ -9,7 +9,7 @@ import coffeeImg4 from '../../assets/products/coffee/coffee_item4-300x300.jpg'
 import coffeeImg5 from '../../assets/products/coffee/coffee_item7-300x300.jpg'
 import coffeeImg6 from '../../assets/products/coffee/coffee_item8-300x300.jpg'
 import coffeeImg7 from '../../assets/products/coffee/coffee_item9-300x300.jpg'
-import { FaShoppingCart, FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { FaShoppingCart, FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 // Sample Data
 const products = {
@@ -40,10 +40,10 @@ const products = {
 const NextArrow = ({ onClick }) => {
   return (
     <div
-      className="absolute top-[50%] right-0 transform -translate-y-1/2 text-white cursor-pointer z-10"
+      className="absolute top-[50%] -right-10 transform -translate-y-1/2 text-white cursor-pointer z-10 "
       onClick={onClick}
     >
-      <FaArrowRight className="text-3xl hover:text-yellow-400" />
+      <FaChevronRight className="text-3xl hover:text-yellow-400" />
     </div>
   );
 };
@@ -52,10 +52,10 @@ const NextArrow = ({ onClick }) => {
 const PrevArrow = ({ onClick }) => {
   return (
     <div
-      className="absolute top-[50%] left-0 transform -translate-y-1/2 text-white cursor-pointer z-10"
+      className="absolute top-[50%] -left-10 transform -translate-y-1/2 text-white cursor-pointer z-10  p-2"
       onClick={onClick}
     >
-      <FaArrowLeft className="text-3xl hover:text-yellow-400" />
+      <FaChevronLeft className="text-3xl hover:text-yellow-400" />
     </div>
   );
 };
@@ -99,15 +99,17 @@ const ProductSlider = () => {
   return (
     <div className="bg-gray-900 text-white py-8 px-[10%] relative h-screen">
       <div className="text-center mb-6 py-16">
-        <h2 className="text-[200px] font-bold text-primary opacity-10 absolute inset-0 -z-20">Products</h2>
+        <h2 className="text-[200px] font-bold text-primary opacity-10 absolute inset-0 z-0">Products</h2>
         <h2 className="text-2xl font-bold text-primary">Choose your coffee</h2>
         <h3 className="text-6xl font-bold mt-2">Recent Products</h3>
-        <div className="mt-4">
+        <div className="mt-4 z-10 absolute left-[50%] -translate-x-[50%]">
           {Object.keys(products).map((category) => (
             <button
               key={category}
               className={`mx-2 text-lg font-semibold ${
-                selectedCategory === category ? "text-yellow-400" : "text-white"
+                selectedCategory === category 
+                ? "text-yellow-400 underline underline-offset-4 decoration-4 decoration-secondary"
+                : "text-white"
               }`}
               onClick={() => handleCategoryChange(category)}
             >
@@ -134,7 +136,7 @@ const ProductSlider = () => {
         ))}
       </Slider>
 
-      <div className="text-center mt-10 cursor-pointer z-50 absolute bottom-0 left-[50%] -translate-x-[50%]">
+      <div className="text-center my-10 cursor-pointer z-50 absolute bottom-0 left-[50%] -translate-x-[50%]">
         <button className="border-primary-lite hover:border-white text-white hover:bg-white hover:text-black border-2 text-lg py-2 px-6">
           View all products
         </button>

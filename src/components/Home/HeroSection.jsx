@@ -1,6 +1,6 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import bg1 from "../../assets/coffee bg 1.png";
-import bg2 from "../../assets/top-view-tasty-espresso-served-cup-with-coffee.jpg";
+import bg1 from "../../assets/coffee bg 1.pngblack.png";
+import bg2 from "../../assets/coffee2.png";
 import { useEffect, useState } from "react";
 
 const HeroSection = () => {
