@@ -10,8 +10,8 @@ const OurStory = () => {
       "Lorem ipsum aute enim pariatur ea culpa nulla ut laborum sint nisi laborum culpa ea enim do qui ea deserunt amet proident cillum tempor fugiat magna aliquip sed cillum ullamco sit adipisicing ut velit nulla aliqua.",
   };
   return (
-    <div className="w-full  h-[80%] flex  bg-black 2xl:px-[10%] 2xl:py-[5%] ">
-      <div className="w-1/2 flex flex-col justify-center items-center text-white text-center px-[10%]">
+    <div className="w-full  h-[80%] lg:flex  bg-black 2xl:px-[10%] 2xl:py-[5%] ">
+      <div className="w-full my-20 lg:my-0 lg:w-1/2 flex flex-col justify-center items-center text-white text-center px-[10%]">
         <h1 className="font1 text-[120px] my-0 py-0  leading-[.6] text-primary">
           {data.headingOne}
         </h1>
@@ -20,8 +20,8 @@ const OurStory = () => {
         </h1>
         <p className="my-10">{data.description}</p>
       </div>
-      <div className="w-1/2 grid grid-cols-2 gap-5 my-20 px-[150px]">
-        <div className=" rounded-xl    ">
+      <div className="w-full lg:w-1/2 grid grid-cols-2 gap-5 my-20 px-10 ">
+        <div className=" rounded-xl">
           <img src={img1} className="rounded-2xl " alt="" />
         </div>
         <div className=" rounded-xl    ">

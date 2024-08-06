@@ -13,6 +13,7 @@ export default {
       transparent: 'transparent',
       current: 'currentColor',
       'white': '#ffffff',
+      'black': '#000000',
       'purple': '#3f3cbb',
       'midnight': '#121063',
       'metal': '#565584',
@@ -21,6 +22,8 @@ export default {
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
       'primary':'#CA8E46',
+      'secondary':'#C0AA83',
+      'primary-lite':'#CA8E46',
     },
 
   },
