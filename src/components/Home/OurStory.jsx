@@ -20,7 +20,7 @@ const OurStory = () => {
         </h1>
         <p className="my-10">{data.description}</p>
       </div>
-      <div className="w-full lg:w-1/2 grid grid-cols-2 gap-5 my-20 px-10 ">
+      <div className="w-full lg:w-1/2 grid grid-cols-2 gap-5 my-20 px-10 lg:py-10 xl:py-auto ">
         <div className=" rounded-xl">
           <img src={img1} className="rounded-2xl " alt="" />
         </div>

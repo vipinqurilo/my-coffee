@@ -128,8 +128,8 @@ const ProductSlider = () => {
 
   return (
     <div className="bg-gray-900 text-white py-8 px-[10%] relative min-h-screen overflow-hidden">
-      <div className="text-center mb-20 md:mb-6  lg:py-16">
-        <h2 className=" text-[80px]  lg:text-[200px] font-bold text-primary opacity-10 absolute inset-0 z-0">
+      <div className="text-center mb-20 md:mb-6  lg:py-16 pb-10">
+        <h2 className=" text-[80px]  md:text-[200px] font-bold text-primary opacity-10 absolute inset-0 z-0">
           Products
         </h2>
         <h2 className="text-2xl font-bold text-primary">Choose your coffee</h2>

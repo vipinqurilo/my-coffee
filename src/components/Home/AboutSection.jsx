@@ -52,7 +52,7 @@ const AboutSection = () => {
   return (
     <div className="relative w-full min-h-screen bg-white flex justify-center  items-center 2xl:px-[10%] ">
       <div className="w-[90%]  h-[90%] md:flex justify-between items-center">
-        <div className="  md:w-1/2 bg-contain bg-center bg-no-repeat  h-[500px] flex justify-center items-center flex-wrap " style={{backgroundImage:`url(${bgImg})`}}>
+        <div className="  xl:w-1/2 w-full bg-contain bg-center bg-no-repeat  h-[500px] flex justify-center items-center flex-wrap " style={{backgroundImage:`url(${bgImg})`}}>
           <div className="  w-[90%] h-[90%] " >
             
             <p className="text-primary text-xl font-normal m-0 ">Who we are</p>
@@ -73,7 +73,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-        <div className="md:flex mx-4 md:mx- ">
+        <div className="md:flex mx-4 xl:mx-1/2 ">
           <div className="  md:w-[300px] h-[500px]">
             {RIghtSidePart.map((elment) => {
               return (

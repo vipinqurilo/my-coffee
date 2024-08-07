@@ -107,7 +107,7 @@ const TestimonialSlider = () => {
                   <p className="text-sm uppercase">{testimonial.role}</p>
                 </div>
                 <div>
-                  <p className="text-[24px] font-[600] italic mb-4">
+                  <p className="md:text-[24px] font-[600] italic mb-4">
                     {testimonial.content}
                   </p>
                 </div>
