@@ -1,14 +1,14 @@
 import { useState } from "react";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import coffeeImg1 from '../../assets/products/coffee/coffee_item1-300x300.jpg'
-import coffeeImg2 from '../../assets/products/coffee/coffee_item2-300x300.jpg'
-import coffeeImg3 from '../../assets/products/coffee/coffee_item3-300x300.jpg'
-import coffeeImg4 from '../../assets/products/coffee/coffee_item4-300x300.jpg'
-import coffeeImg5 from '../../assets/products/coffee/coffee_item7-300x300.jpg'
-import coffeeImg6 from '../../assets/products/coffee/coffee_item8-300x300.jpg'
-import coffeeImg7 from '../../assets/products/coffee/coffee_item9-300x300.jpg'
+import coffeeImg1 from "../../assets/products/coffee/coffee_item1-300x300.jpg";
+import coffeeImg2 from "../../assets/products/coffee/coffee_item2-300x300.jpg";
+import coffeeImg3 from "../../assets/products/coffee/coffee_item3-300x300.jpg";
+import coffeeImg4 from "../../assets/products/coffee/coffee_item4-300x300.jpg";
+import coffeeImg5 from "../../assets/products/coffee/coffee_item7-300x300.jpg";
+import coffeeImg6 from "../../assets/products/coffee/coffee_item8-300x300.jpg";
+import coffeeImg7 from "../../assets/products/coffee/coffee_item9-300x300.jpg";
 import { FaShoppingCart, FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 // Sample Data
@@ -23,16 +23,46 @@ const products = {
     { id: 7, name: "Product 7", price: "$15.00", image: coffeeImg7 },
   ],
   GreenCoffee: [
-    { id: 3, name: "Product 3", price: "$12.00", image: "https://via.placeholder.com/150" },
-    { id: 4, name: "Product 4", price: "$18.00", image: "https://via.placeholder.com/150" },
+    {
+      id: 3,
+      name: "Product 3",
+      price: "$12.00",
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      id: 4,
+      name: "Product 4",
+      price: "$18.00",
+      image: "https://via.placeholder.com/150",
+    },
   ],
   RoastedCoffee: [
-    { id: 5, name: "Product 5", price: "$20.00", image: "https://via.placeholder.com/150" },
-    { id: 6, name: "Product 6", price: "$25.00", image: "https://via.placeholder.com/150" },
+    {
+      id: 5,
+      name: "Product 5",
+      price: "$20.00",
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      id: 6,
+      name: "Product 6",
+      price: "$25.00",
+      image: "https://via.placeholder.com/150",
+    },
   ],
   Italian: [
-    { id: 7, name: "Product 7", price: "$30.00", image: "https://via.placeholder.com/150" },
-    { id: 8, name: "Product 8", price: "$35.00", image: "https://via.placeholder.com/150" },
+    {
+      id: 7,
+      name: "Product 7",
+      price: "$30.00",
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      id: 8,
+      name: "Product 8",
+      price: "$35.00",
+      image: "https://via.placeholder.com/150",
+    },
   ],
 };
 
@@ -97,19 +127,21 @@ const ProductSlider = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-white py-8 px-[10%] relative h-screen">
-      <div className="text-center mb-6 py-16">
-        <h2 className="text-[200px] font-bold text-primary opacity-10 absolute inset-0 z-0">Products</h2>
+    <div className="bg-gray-900 text-white py-8 px-[10%] relative min-h-screen overflow-hidden">
+      <div className="text-center mb-20 md:mb-6  lg:py-16">
+        <h2 className=" text-[80px]  lg:text-[200px] font-bold text-primary opacity-10 absolute inset-0 z-0">
+          Products
+        </h2>
         <h2 className="text-2xl font-bold text-primary">Choose your coffee</h2>
         <h3 className="text-6xl font-bold mt-2">Recent Products</h3>
-        <div className="mt-4 z-10 absolute left-[50%] -translate-x-[50%]">
+        <div className="mt-4 z-10 md:absolute md:left-[50%] md:-translate-x-[50%]">
           {Object.keys(products).map((category) => (
             <button
               key={category}
               className={`mx-2 text-lg font-semibold ${
-                selectedCategory === category 
-                ? "text-yellow-400 underline underline-offset-4 decoration-4 decoration-secondary"
-                : "text-white"
+                selectedCategory === category
+                  ? "text-yellow-400 underline underline-offset-4 decoration-4 decoration-secondary"
+                  : "text-white"
               }`}
               onClick={() => handleCategoryChange(category)}
             >
@@ -123,10 +155,18 @@ const ProductSlider = () => {
         {products[selectedCategory].map((product) => (
           <div key={product.id} className="px-4">
             <div className="bg-white text-black p-4">
-              <img src={product.image} alt={product.name} className="max-h-[290px] w-full object-cover mb-4" />
+              <img
+                src={product.image}
+                alt={product.name}
+                className="max-h-[290px] w-full object-cover mb-4"
+              />
               <div className="text-center flex justify-center items-center flex-col">
-                <h4 className="text-[24px] font-semibold mb-2 text-zinc-200">{product.name}</h4>
-                <p className="text-2xl text-secondary font-bold">{product.price}</p>
+                <h4 className="text-[24px] font-semibold mb-2 text-zinc-200">
+                  {product.name}
+                </h4>
+                <p className="text-2xl text-secondary font-bold">
+                  {product.price}
+                </p>
                 <button className="flex justify-center items-center py-2 px-5 border-2 bg-secondary my-4 hover:bg-black text-white">
                   <FaShoppingCart className="mx-2" /> read More
                 </button>
@@ -136,7 +176,7 @@ const ProductSlider = () => {
         ))}
       </Slider>
 
-      <div className="text-center my-10 cursor-pointer z-50 absolute bottom-0 left-[50%] -translate-x-[50%]">
+      <div className="text-center my-10 cursor-pointer z-50 md:absolute md:bottom-0 md:left-[50%] md:-translate-x-[50%]">
         <button className="border-primary-lite hover:border-white text-white hover:bg-white hover:text-black border-2 text-lg py-2 px-6">
           View all products
         </button>

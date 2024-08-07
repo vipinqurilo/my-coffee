@@ -1,4 +1,4 @@
-import imageloader from "../../assets/loading/loader animation.gif";
+import imageloader from "../../assets/loader animation.gif";
 
 const HomeLoader = () => {
   return (

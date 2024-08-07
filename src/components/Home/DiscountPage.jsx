@@ -4,9 +4,9 @@ import discountbackgorundimage from "../../assets/discount/discount-bg.png";
 const Diccountpage = () => {
   return (
     <div className="  w-full h-screen  bg-white flex justify-center  items-center">
-      <div className="flex  items-center justify-center  w-[90%] bg-gray-50    h-[700px]">
+      <div className="md:flex  items-center justify-center  w-[90%] bg-gray-50    max-h-screen">
         <div
-          className="  w-[50%]  h-[100%] bg-cover"
+          className="  md:w-[50%]  h-[100%] bg-cover py-10 md:py-auto"
           style={{ backgroundImage: `url(${discountbackgorundimage})` }}
         >
           <div className="  w-[100%] h-[30%]   flex justify-center items-end      ">
@@ -16,7 +16,7 @@ const Diccountpage = () => {
             </div>
           </div>
 
-          <div className="   w-[100%] h-[38%]  flex items-center  justify-center  ">
+          <div className="   w-[100%] h-[38%]  flex items-center  justify-center my-4 ">
             <img src={dicountcard} alt="Coffee Beans" className=" " />
             <br></br>
             <div className="bg-silver "></div>
@@ -36,11 +36,9 @@ const Diccountpage = () => {
           </div>
         </div>
 
-        <div className="bg-perpal w-[50%]  h-[100%]">
-          <div
-            className="bg-metal h-[100%] bg-cover   bg-no-repeat "
-            style={{ backgroundImage: `url(${discountimage})` }}
-          ></div>
+        <div className="bg-perpal w-[50%] hidden md:block   h-[100%]">
+          
+          <img src={discountimage} alt="" />
         </div>
       </div>
     </div>

@@ -54,7 +54,7 @@ const SpecialCard = () => {
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="max-w-screen-lg mx-auto relative z-10 px-6 md:px-12 w-1/2 h-full flex justify-center items-center text-center">
+      <div className="max-w-screen-lg mx-auto relative z-10 px-6 md:px-12 md:w-1/2 h-full flex justify-center items-center text-center">
         <div className="text-white ">
           <h2 className="z-50 font1 leading-[.3] text-primary mb-4 text-[120px] mt-10">
             Specials
@@ -72,12 +72,12 @@ const SpecialCard = () => {
           </button>
         </div>
       </div>
-      <div className="w-1/2 relative h-full -translate-y-[30%]">
+      <div className="md:w-1/2 relative h-full hidden md:block -translate-y-[30%]">
         <div className="absolute " style={translateStyle}>
           <img
             src={cup}
             alt="Coffee Cup"
-            className="rounded-full w-[570px] h-[570px] object-cover shadow-lg top-0  "
+            className="rounded-full w-[400px] xl:w-[570px] -[400px] xl:h-[570px] object-cover shadow-lg top-0  "
           />
           <div className="absolute top-10 left-0 bg-primary text-white p-4 rounded-full font-bold text-center w-32 h-32 flex flex-col justify-center items-center">
             <div className="text-3xl">600</div>
