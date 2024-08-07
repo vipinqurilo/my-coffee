@@ -1,9 +1,15 @@
+import bgImg from '../../assets/about-market/about-bg.png'
+import sign from '../../assets/about-market/sign-1.png'
+import img1 from '../../assets/about-market/about-icon-1.png'
+import img2 from '../../assets/about-market/about-icon-2.png'
+import img3 from '../../assets/about-market/about-icon-3.png'
+import img4 from '../../assets/about-market/about-icon-4.png'
 const AboutSection = () => {
   const RIghtSidePart = [
     {
       image: (
         <img
-          src="http://coffeeking.like-themes.com/wp-content/uploads/2017/09/about-icon-1.png"
+          src={img1}
           alt="The best World sorts"
         />
       ),
@@ -14,7 +20,7 @@ const AboutSection = () => {
     {
       image: (
         <img
-          src="http://coffeeking.like-themes.com/wp-content/uploads/2017/09/about-icon-3.png"
+          src={img2}
           alt="Professional baristas"
         />
       ),
@@ -27,7 +33,7 @@ const AboutSection = () => {
   const RIghtSidePtwo = [
     {
       image: (
-        <img src="http://coffeeking.like-themes.com/wp-content/uploads/2017/09/about-icon-2.png"  alt="Many points of sale"/>
+        <img src={img3}  alt="Many points of sale"/>
       ),
       text1: "Many points of sale",
       text2:
@@ -35,7 +41,7 @@ const AboutSection = () => {
     },
     {
       image: (
-        <img src="http://coffeeking.like-themes.com/wp-content/uploads/2017/09/about-icon-4.png"  alt="24/7 fast delivery"/>
+        <img src={img4}  alt="24/7 fast delivery"/>
       ),
       text1: "24/7 fast delivery",
       text2:
@@ -46,8 +52,8 @@ const AboutSection = () => {
   return (
     <div className="relative w-full h-screen bg-white flex justify-center  items-center 2xl:px-[10%] ">
       <div className="w-[90%]  h-[90%] flex justify-between items-center">
-        <div className="  w-[495px] h-[500px] flex justify-center items-center flex-wrap">
-          <div className="  w-[90%] h-[90%]">
+        <div className="  w-1/2 bg-contain bg-center bg-no-repeat  h-[500px] flex justify-center items-center flex-wrap " style={{backgroundImage:`url(${bgImg})`}}>
+          <div className="  w-[90%] h-[90%] " >
             
             <p className="text-primary text-xl font-normal m-0 ">Who we are</p>
             <p className="text-6xl font-bold m-0">About market</p>
@@ -61,7 +67,7 @@ const AboutSection = () => {
               <img
                 width="133"
                 height="74"
-                src="http://coffeeking.like-themes.com/wp-content/uploads/2017/09/sign-1.png"
+                src={sign}
                 alt=""
               />
             </div>
