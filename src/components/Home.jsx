@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Loader from "./Loader";
+import Loader from "../components/Home/Loader";
 import AboutSection from "./Home/AboutSection";
 import Footer from "./Home/Footer";
 import HeroSection from "./Home/HeroSection";
