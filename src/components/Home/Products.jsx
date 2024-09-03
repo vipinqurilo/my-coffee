@@ -127,7 +127,7 @@ const ProductSlider = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-white py-8 px-[10%] relative min-h-screen overflow-hidden">
+    <div className="bg-gray-900 text-white py-8 px-[10%] relative h-auto overflow-hidden">
       <div className="text-center mb-20 md:mb-6  lg:py-16 pb-10">
         <h2 className=" text-[80px]  md:text-[200px] font-bold text-primary opacity-10 absolute inset-0 z-0">
           Products
@@ -176,7 +176,7 @@ const ProductSlider = () => {
         ))}
       </Slider>
 
-      <div className="text-center my-10 cursor-pointer z-50 md:absolute md:bottom-0 md:left-[50%] md:-translate-x-[50%]">
+      <div className="text-center my-10 cursor-pointer z-50 ">
         <button className="border-primary-lite hover:border-white text-white hover:bg-white hover:text-black border-2 text-lg py-2 px-6">
           View all products
         </button>
